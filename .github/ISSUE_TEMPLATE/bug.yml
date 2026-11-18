@@ -1,0 +1,46 @@
+name: Ошибка в панели
+description: Что-то в панели работает не так, как должно
+title: "Ошибка: "
+labels: ["ошибка"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Проще отправить сообщение из самой панели: меню профиля в админке → «Сообщить об ошибке».
+        Не пишите сюда пароли, ключи, токены, ссылки подписок и данные клиентов: репозиторий открытый.
+  - type: textarea
+    id: what
+    attributes:
+      label: Что случилось
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      placeholder: |
+        1. …
+        2. …
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидали
+  - type: input
+    id: version
+    attributes:
+      label: Версия панели
+      description: Номер сборки виден в админке рядом с кнопкой темы
+    validations:
+      required: true
+  - type: input
+    id: remnawave
+    attributes:
+      label: Версия Remnawave
+  - type: input
+    id: page
+    attributes:
+      label: Страница
+  - type: input
+    id: browser
+    attributes:
+      label: Браузер и система
